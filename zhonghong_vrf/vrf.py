@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 acs = None
 CONFIG = {}
 STATES = {'on':{0:'OFF', 1:'ON','OFF':0,'ON':1},
-    'mode':{0:'off',1:'cool',2:'dry',3:'auto',4:'fan_only',8:'heat','off':0,'cool':1,'dry':2,'auto':3,'fan_only':4,'heat':8},
+    'mode':{0:'auto',1:'cool',2:'dry',4:'fan_only',8:'heat','auto':0,'cool':1,'dry':2,'fan_only':4,'heat':8},
     'fan':{0:'auto',1:'high',2:'medium',4:'low',8:'silent','auto':0,'high':1,'medium':2,'low':4,'silent':8}}
 
 def get_config():
@@ -141,13 +141,11 @@ def get_configuration(ac):
       - "cool"\n\
       - "dry"\n\
       - "fan_only"\n\
-      - "off"\n\
     fan_modes:\n\
       - "auto"\n\
       - "low"\n\
       - "medium"\n\
       - "high"\n\
-      - "silent"\n'
     str_ac += '    power_command_topic: "homeassistant/climate/zhonghong/ac_{0}_{1}/on/set"\n'.format(ac['oa'], ac['ia'])
     str_ac += '    mode_command_topic: "homeassistant/climate/zhonghong/ac_{0}_{1}/mode/set"\n'.format(ac['oa'], ac['ia'])
     str_ac += '    temperature_command_topic: "homeassistant/climate/zhonghong/ac_{0}_{1}/temp/set"\n'.format(ac['oa'], ac['ia'])
