@@ -145,7 +145,7 @@ def get_configuration(ac):
       - "auto"\n\
       - "low"\n\
       - "medium"\n\
-      - "high"\n\
+      - "high"\n'
     str_ac += '    power_command_topic: "homeassistant/climate/zhonghong/ac_{0}_{1}/on/set"\n'.format(ac['oa'], ac['ia'])
     str_ac += '    mode_command_topic: "homeassistant/climate/zhonghong/ac_{0}_{1}/mode/set"\n'.format(ac['oa'], ac['ia'])
     str_ac += '    temperature_command_topic: "homeassistant/climate/zhonghong/ac_{0}_{1}/temp/set"\n'.format(ac['oa'], ac['ia'])
